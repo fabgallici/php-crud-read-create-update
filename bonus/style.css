@@ -1,0 +1,19 @@
+* {
+
+  background: grey;
+  color: white;
+}
+
+form {
+  margin-bottom: 30px;
+}
+
+h1, h2 {
+
+  background: purple;
+}
+.config {
+  border: 1px solid purple;
+  padding: 5px;
+  margin-bottom: 5px;
+}
