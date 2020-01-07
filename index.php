@@ -40,12 +40,23 @@
 <body>
   <h1>Hotel Config CRUD</h1>
 
-  <form id="myForm">
+  <h2>ADD NEW CONFIG</h2>
+  <form id="myAddForm">
     <label for="title">title:</label>
     <input type="text" name="title" value="nuovo titolo"><br>
     <label for="description">description:</label>
     <input type="text" name="description" value="nuova descrizione"><br>
-    <input type="submit" name="submit" value="new config">
+    <input type="submit" name="submit" value="NEW config">
+  </form>
+  <h2>UPDATE EXISTING CONFIG</h2>
+  <form id="myUpdateForm">
+    <label for="title">title:</label>
+    <input type="text" name="title" value="updated title"><br>
+    <label for="description">description:</label>
+    <input type="text" name="description" value="update descrizione"><br>
+    <label for="id">id: </label>
+    <input type="text" name="id">
+    <input type="submit" name="submit" value="UPDATE config">
   </form>
 
   <div id="container"> </div>

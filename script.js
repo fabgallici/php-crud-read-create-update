@@ -69,10 +69,36 @@ function addNewConfig() {
   return false;
 }
 
+function updateConfig() {
+  var me = $(this);
+  $.ajax({
+
+    url: "updateConfig.php",
+    method: "POST",
+    data: me.serialize(),
+    success: function (data) {
+      console.log(data);
+
+      if (data) {
+
+        getConfig();
+      }
+    },
+    error: function (error) {
+
+      console.log("error", error);
+    }
+  });
+
+  return false; //prevent default aggiornamento automatico pagina dopo submit
+}
+
 function init() {
 
   getConfig();
-  $("#myForm").submit(addNewConfig);
+  $("#myAddForm").submit(addNewConfig);
+
+  $("#myUpdateForm").submit(updateConfig);
 }
 
 $(window).ready(init);
