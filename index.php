@@ -38,16 +38,14 @@
 </head>
 
 <body>
-  <h1>Hello World</h1>
+  <h1>Hotel Config CRUD</h1>
 
   <form id="myForm">
-    <label for="name">nome:</label>
-    <input type="text" name="name" value="nuovo nome"><br>
-    <label for="lastname">lastname:</label>
-    <input type="text" name="lastname" value="nuovo cognome"><br>
-    <label for="address">address:</label>
-    <input type="text" name="address" value="nuovo indirizzo"><br>
-    <input type="submit" name="submit" value="nuovo pagante">
+    <label for="title">title:</label>
+    <input type="text" name="title" value="nuovo titolo"><br>
+    <label for="description">description:</label>
+    <input type="text" name="description" value="nuova descrizione"><br>
+    <input type="submit" name="submit" value="new config">
   </form>
 
   <div id="container"> </div>

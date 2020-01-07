@@ -3,7 +3,16 @@
 // (titolo e descrizione) e tentare l'approccio per una update 
 // (aggiornamento di una configurazione esistente).
 
+function targetReset() {
+
+  var target = $("#container");
+  target.html('');
+}
+
 function printConfig(data) {
+
+  targetReset();
+
   var target = $("#container");
 
   var template = $("#config-template").html();
@@ -36,9 +45,34 @@ function getConfig() {
   });
 }
 
+function addNewConfig() {
+  var me = $(this);
+  $.ajax({
+
+    url: "addNewConfig.php",
+    method: "POST",
+    data: me.serialize(),
+    success: function (data) {
+      // console.log(data);
+
+      if (data) {
+
+        getConfig();
+      }
+    },
+    error: function (error) {
+
+      console.log("error", error);
+    }
+  });
+
+  return false;
+}
+
 function init() {
 
   getConfig();
+  $("#myForm").submit(addNewConfig);
 }
 
 $(window).ready(init);
