@@ -22,19 +22,13 @@
   <!-- JS: HANDLEBARS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js" charset="utf-8"></script>
   <!-- TEMPLATE: MESSAGE MENU -->
-  <script id="box-template" type="text/x-handlebars-template">
-    <div class="box">
-        <p>{{ nome }} {{ cognome }}</p>
-        <p>{{ anno_nascita }}</p>
+  <script id="config-template" type="text/x-handlebars-template">
+    <div class="config">
+        <p>id [{{ id }}]</p>
+        <p>title: {{ title }}</p>
+        <p>description: {{ description }}</p>
       </div>
-    </script>
-  <script id="box2-template" type="text/x-handlebars-template">
-    <div class="box">
-        <p>[{{ ospite_id }}] {{ name }} {{ lastname }}</p>
-        <p>{{ address }}</p>
-      </div>
-    </script>
-
+  </script>
 
   <!-- CSS: MY STYLE -->
   <link rel="stylesheet" href="style.css">
@@ -56,8 +50,7 @@
     <input type="submit" name="submit" value="nuovo pagante">
   </form>
 
-  <div id="container" class="container">
-  </div>
+  <div id="container"> </div>
 </body>
 
 </html>
